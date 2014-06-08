@@ -63,12 +63,12 @@ class MinimalController(object):
         self.http_client = http_client
         self.model = model
 
-    def get(self, item_id):
+    def get(self, item_id=None):
         """Returns :class:`models.Model` object representing an item
         identified by ``item_id``
 
-        :param item_id: This is an id of the requested object. The item_id
-        encoded in GET request as the 'id' parameter
+        :param item_id: (Optional) This is an id of the requested object.
+        The item_id encoded in GET request as the 'id' parameter
         :returns: :class:`models.Model` object
         """
         params = {"id": item_id}
